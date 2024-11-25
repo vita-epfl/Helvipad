@@ -3,24 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+        content="Helvipad: A Real-World Dataset for Omnidirectional Stereo Depth Estimation">
+  <meta name="keywords" content="Omnidirectional Imaging, Depth Estimation, Deep Learning">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag('config', 'G-PYVRSFMDRL');
-  </script>
+  <title>Helvipad: A Real-World Dataset for Omnidirectional Stereo Depth Estimation</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -42,92 +28,56 @@
 </head>
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</nav>
-
-
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
+          <!-- Title -->
+          <h1 class="title is-1 publication-title">
+            <span style="font-variant: small-caps;">Helvipad</span>: A Real-World Dataset for Omnidirectional Stereo Depth Estimation
+          </h1>
+
+          <!-- Authors -->
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
+              <a href="https://ch.linkedin.com/in/mehdi-zayene-191a64156">Mehdi Zayene</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
+              <a href="https://people.epfl.ch/jannik.endres">Jannik Endres</a><sup>1,2</sup>,</span>
             <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
+              <a href="https://people.epfl.ch/albias.havolli">Albias Havolli</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
+              <a href="https://chcorbi.github.io">Charles Corbière</a><sup>1,*</sup>,
+            </span><br>
+            <span class="author-block">
+              <a href="https://people.epfl.ch/salim.cherkaoui">Salim Cherkaoui</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
+              <a href="https://people.epfl.ch/alexandre.benahmedkontouli">Alexandre Ben Ahmed Kontouli</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
+              <a href="https://people.epfl.ch/alexandre.alahi">Alexandre Alahi</a><sup>1</sup>
             </span>
           </div>
 
-          <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
+          <!-- Affiliations -->
+          <div class="is-size-5 publication-authors" style="margin-top: 10px;">
+            <span class="author-block"><sup>1</sup>École Polytechnique Fédérale de Lausanne (EPFL),  </span>
+            <span class="author-block"><sup> 2</sup>TU Darmstadt</span>
+            <span class="project-lead"><small><br><sup>*</sup>Project Lead</small></span>
+          </div>
+
+          <!-- Logo -->
+          <div style="margin-top: 20px;">
+            <a href="https://www.epfl.ch/labs/vita/">
+              <img src="static/images/vita-epfl.png" width="300px" alt="VITA EPFL Logo" />
+            </a>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
-              <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
               <span class="link-block">
                 <a href="https://arxiv.org/abs/2011.12948"
                    class="external-link button is-normal is-rounded is-dark">
@@ -137,26 +87,6 @@
                   <span>arXiv</span>
                 </a>
               </span>
-              <!-- Video Link. -->
-              <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span>
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href="https://github.com/google/nerfies"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                  </a>
-              </span>
               <!-- Dataset Link. -->
               <span class="link-block">
                 <a href="https://github.com/google/nerfies/releases/tag/0.1"
@@ -164,7 +94,7 @@
                   <span class="icon">
                       <i class="far fa-images"></i>
                   </span>
-                  <span>Data</span>
+                  <span>Dataset</span>
                   </a>
             </div>
 
@@ -179,76 +109,12 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
+        <source src="./static/videos/helvipad.mov"
                 type="video/mp4">
       </video>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
-      </h2>
     </div>
   </div>
 </section>
-
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -258,213 +124,236 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            Despite considerable progress in stereo depth estimation, omnidirectional imaging remains underexplored,
+            mainly due to the lack of appropriate data.
           </p>
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
+            We introduce <span style="font-variant: small-caps;">Helvipad</span>,
+            a real-world dataset for omnidirectional stereo depth estimation, consisting of 40K frames from video sequences
+            across diverse environments, including crowded indoor and outdoor scenes with diverse lighting conditions.
+            Collected using two 360° cameras in a top-bottom setup and a LiDAR sensor, the dataset includes accurate
+            depth and disparity labels by projecting 3D point clouds onto equirectangular images. Additionally, we
+            provide an augmented training set with a significantly increased label density by using depth completion.
           </p>
           <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            We benchmark leading stereo depth estimation models for both standard and omnidirectional images.
+            Results show that while recent stereo methods perform decently, a significant challenge persists in accurately
+            estimating depth in omnidirectional imaging. To address this, we introduce necessary adaptations to stereo models,
+            achieving improved performance.
           </p>
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
-
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-    <!--/ Paper video. -->
-  </div>
 </section>
 
-
-<section class="section">
+<!-- Dataset Statistics Section -->
+<section class="section" id="dataset">
   <div class="container is-max-desktop">
+    <h2 class="title is-3">Dataset</h2>
+    <div class="content has-text-justified">
+      <p>
+  The <span style="font-variant: small-caps;">Helvipad</span> dataset includes of 39,553 labeled frames from indoor and outdoor scenes under various lighting conditions.
 
-    <div class="columns is-centered">
-
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
-          <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
-          </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
+      </p>
+      <figure>
+        <img src="static/images/front_page.png" alt="Dataset visualisations">
+      </figure>
+      <p>
+      The equipment setup of our data acquisition includes:
+    </p>
+    <ul>
+      <li>
+        <strong>2 Ricoh Theta V cameras</strong>, capturing images in 4K/UHD equirectangular format with an initial size of 3840 × 1920 pixels at 30 fps, mounted in a top-bottom arrangement with a 19.1 cm baseline between them.
+      </li>
+      <li>
+        <strong>Ouster OS1-64 LiDAR Sensor</strong>, providing 64 beams, a vertical field of view of 45°, and capable of measuring depths from 0 to 120 meters at 10 fps, mounted 45.0 cm below the bottom camera.
+      </li>
+      <li>
+        <strong>Nvidia Jetson Xavier</strong>, serving as the central processor to manage data capture and ensure synchronization across all devices during data collection.
+      </li>
+    </ul>
+      <figure>
+        <img src="static/images/lidar_mapping.png" alt="LiDAR to 360° Mapping Illustration" style="width: 80%; height: auto;">
+      </figure>
+      <p>
+        Data was extracted from video sequences captured between December 2023 and February 2024. Each sequence is synchronized with its corresponding
+        LiDAR point clouds, which are projected on frames to obtain depth maps and disparity maps.
+      </p>
+      <div class="columns is-centered">
+        <div class="column is-one-third">
+          <figure>
+            <img src="static/images/depth_histograms_all.png" alt="Histogram of Depth Values - All Scenes">
+            <figcaption>Depth Distribution - All</figcaption>
+          </figure>
         </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
+        <div class="column is-one-third">
+          <figure>
+            <img src="static/images/depth_histograms_indoor.png" alt="Histogram of Depth Values - Indoor Scenes">
+            <figcaption>Depth Distribution - Indoor</figcaption>
+          </figure>
         </div>
-      </div>
-    </div>
-    <!--/ Matting. -->
-
-    <!-- Animation. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
-
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
-        <div class="content has-text-justified">
-          <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
-          </p>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
-        </div>
-        <br/>
-        <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
-        <div class="content has-text-justified">
-          <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
-          </p>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ Re-rendering. -->
-
-      </div>
-    </div>
-    <!--/ Animation. -->
-
-
-    <!-- Concurrent Work. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
+        <div class="column is-one-third">
+          <figure>
+            <img src="static/images/depth_histograms_outdoor.png" alt="Histogram of Depth Values - Outdoor Scenes">
+            <figcaption>Depth Distribution - Outdoor</figcaption>
+          </figure>
         </div>
       </div>
     </div>
-    <!--/ Concurrent Work. -->
-
+    <p>
+      Depth values range from 0.5 to 225  meters, with averages of 8.1 meters overall, 5.4 meters for
+      indoor scenes, and 9.2 meters for combined day and night outdoor scenes.
+    </p>
   </div>
 </section>
+
+
+<!-- Benchmark Results Section -->
+<section class="section" id="benchmark-results">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Benchmark Results</h2>
+    <div class="content has-text-justified">
+      <p>
+        We evaluate the performance of multiple state-of-the-art and popular stereo matching methods, both for standard and 360° images. All models are trained on a single NVIDIA A100 GPU with
+the largest possible batch size to ensure comparable use of computational resources.
+      </p>
+    <table class="table is-striped is-bordered is-hoverable is-fullwidth">
+      <thead>
+        <tr>
+          <th rowspan="2">Method</th>
+          <th rowspan="2">Type</th>
+          <th colspan="3" class="has-text-centered">Disparity (°)</th>
+          <th colspan="3" class="has-text-centered">Depth (m)</th>
+        </tr>
+        <tr>
+          <th class="has-text-centered">MAE</th>
+          <th class="has-text-centered">RMSE</th>
+          <th class="has-text-centered">MARE</th>
+          <th class="has-text-centered">MAE</th>
+          <th class="has-text-centered">RMSE</th>
+          <th class="has-text-centered">MARE</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <a href="https://arxiv.org/abs/1803.08669" target="_blank">PSMNet</a>
+          </td>
+          <td>stereo</td>
+          <td class="has-text-centered">0.33</td>
+          <td class="has-text-centered">0.54</td>
+          <td class="has-text-centered">0.20</td>
+          <td class="has-text-centered">2.79</td>
+          <td class="has-text-centered">6.17</td>
+          <td class="has-text-centered">0.29</td>
+        </tr>
+        <tr>
+          <td>
+            <a href="https://arxiv.org/abs/1911.04460" target="_blank">360SD-Net</a>
+          </td>
+          <td>360° stereo</td>
+          <td class="has-text-centered">0.21</td>
+          <td class="has-text-centered">0.42</td>
+          <td class="has-text-centered">0.18</td>
+          <td class="has-text-centered">2.14</td>
+          <td class="has-text-centered">5.12</td>
+          <td class="has-text-centered">0.15</td>
+        </tr>
+        <tr>
+          <td>
+            <a href="https://arxiv.org/abs/2303.06615" target="_blank">IGEV-Stereo</a>
+          </td>
+          <td>stereo</td>
+          <td class="has-text-centered">0.22</td>
+          <td class="has-text-centered">0.41</td>
+          <td class="has-text-centered">0.17</td>
+          <td class="has-text-centered">1.85</td>
+          <td class="has-text-centered">4.44</td>
+          <td class="has-text-centered">0.15</td>
+        </tr>
+        <tr>
+          <td>360-IGEV-Stereo</td>
+          <td>360° stereo</td>
+          <td class="has-text-centered"><b>0.18</b></td>
+          <td class="has-text-centered"><b>0.39</b></td>
+          <td class="has-text-centered"><b>0.15</b></td>
+          <td class="has-text-centered"><b>1.77</b></td>
+          <td class="has-text-centered"><b>4.36</b></td>
+          <td class="has-text-centered"><b>0.14</b></td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      The dataset is also an ideal testbed for assessing the robustness of depth estimation methods to diverse lighting conditions and depth ranges
+      by training and evaluating models on different subsets of the dataset (e.g., indoor vs. outdoor scenes).
+    </p>
+      <figure>
+        <img src="static/images/cross_scene_generalization.png" alt="Cross-Scene Generalization Performance">
+        <figcaption>Cross-Scene Generalization Performance</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="dataset-structure">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3">Download</h2>
+    <p>
+      Use the link below to download the dataset (soon available).
+    </p>
+    <div class="has-text-centered">
+      <a href="https://github.com/vita-epfl/helvipad/releases" target="_blank" class="button is-primary is-rounded is-large">
+        Download Dataset
+      </a>
+    </div>
+    <div style="margin-top: 30px;">
+      <p>
+        The dataset is organized into training and testing subsets, whose structure is outlined below:
+      </p>
+      <pre style="background: #f5f5f5; padding: 20px; border-radius: 5px; overflow: auto;">
+<code>helvipad/
+├── train/
+│   ├── camera_videos             # Raw video footage
+│   ├── depth_maps                # Depth maps generated from LiDAR data
+│   ├── depth_maps_augmented      # Augmented depth maps using depth completion
+│   ├── disparity_maps            # Disparity maps computed from depth maps
+│   ├── disparity_maps_augmented  # Augmented disparity maps using depth completion
+│   ├── images_top                # Top-camera RGB images
+│   ├── images_bottom             # Bottom-camera RGB images
+│   ├── LiDAR_pcd                 # Original LiDAR point cloud data
+├── test/
+│   ├── camera_videos             # Raw video footage
+│   ├── depth_maps                # Depth maps generated from LiDAR data
+│   ├── disparity_maps            # Disparity maps computed from depth maps
+│   ├── images_top                # Top-camera RGB images
+│   ├── images_bottom             # Bottom-camera RGB images
+│   ├── LiDAR_pcd                 # Original LiDAR point cloud data
+</code></pre>
+    </div>
+  </div>
+</section>
+
 
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+    <p>
+      If you use the <span style="font-variant: small-caps;">Helvipad</span> dataset in your research, please cite it using the following BibTeX entry:
+    </p>
+    <pre><code>@misc{zayene2024helvipad,
+  author        = {Zayene, Mehdi and Endres, Jannik and Havolli, Albias and Corbi\`{e}re, Charles and Cherkaoui, Salim and Ben Ahmed Kontouli, Alexandre and Alahi, Alexandre},
+  title         = {Helvipad: A Real-World Dataset for Omnidirectional Stereo Depth Estimation},
+  year          = {2024},
+  eprint        = {2403.16999},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV}
 }</code></pre>
   </div>
 </section>
 
 
 <footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
@@ -474,11 +363,9 @@
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
           <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
+            This page was built using the
+            <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>
+            which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
           </p>
         </div>
       </div>
