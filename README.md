@@ -1,7 +1,7 @@
 
-# Helvipad: A Real-World Dataset for Omnidirectional Stereo Depth Estimation
+# <span style="font-variant: small-caps;">Helvipad</span>: A Real-World Dataset for Omnidirectional Stereo Depth Estimation
 
-[![arXiv](https://img.shields.io/badge/arXiv-2403.16999-b31b1b.svg)](https://arxiv.org/abs/2403.16999)
+[![arXiv](https://img.shields.io/badge/arXiv-2411.18335-b31b1b.svg)](https://arxiv.org/abs/2411.18335)
 [![Dataset](https://img.shields.io/badge/Dataset-Download-blue.svg)](https://github.com/vita-epfl/helvipad/releases)
 [![Project Page](https://img.shields.io/badge/Project-Page-brightgreen)](https://vita-epfl.github.io/Helvipad/)
 
@@ -17,7 +17,7 @@ Collected using two 360° cameras in a top-bottom setup and a LiDAR sensor, the 
 depth and disparity labels by projecting 3D point clouds onto equirectangular images. Additionally, we
 provide an augmented training set with a significantly increased label density by using depth completion.
 We benchmark leading stereo depth estimation models for both standard and omnidirectional images.
-Results show that while recent stereo methods perform decently, a significant challenge persists in accurately
+The results show that while recent stereo methods perform decently, a significant challenge persists in accurately
 estimating depth in omnidirectional imaging. To address this, we introduce necessary adaptations to stereo models,
 achieving improved performance.
 
