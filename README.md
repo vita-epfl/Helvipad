@@ -54,11 +54,11 @@ the largest possible batch size to ensure comparable use of computational resour
 | [PSMNet](https://arxiv.org/abs/1803.08669)           | Stereo        | 0.33         | 0.54          | 0.20      | 2.79          | 6.17           | 0.29           |
 | [360SD-Net](https://arxiv.org/abs/1911.04460)        | 360° Stereo   | 0.21         | 0.42          | 0.18      | 2.14          | 5.12           | 0.15           |
 | [IGEV-Stereo](https://arxiv.org/abs/2303.06615)      | Stereo        | 0.22         | 0.41          | 0.17      | 1.85          | 4.44           | 0.15           |
-| 360-IGEV-Stereo    | 360° Stereo   | **0.18**     | **0.39**      | **0.15**  | **1.77**      | **4.36**       | **0.14**       |
+| [360-IGEV-Stereo](https://arxiv.org/abs/2411.18335)    | 360° Stereo   | **0.18**     | **0.39**      | **0.15**  | **1.77**      | **4.36**       | **0.14**       |
 
 ## Download
 
-The dataset will be soon available for download [here](https://github.com/vita-epfl/helvipad/releases).
+The dataset is available on [HuggingFace Hub](https://github.com/vita-epfl/helvipad/releases).
 
 
 ## Project Page
