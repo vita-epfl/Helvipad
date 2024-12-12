@@ -2,7 +2,7 @@
 # <span style="font-variant: small-caps;">Helvipad</span>: A Real-World Dataset for Omnidirectional Stereo Depth Estimation
 
 [![arXiv](https://img.shields.io/badge/arXiv-2411.18335-b31b1b.svg)](https://arxiv.org/abs/2411.18335)
-[![Dataset](https://img.shields.io/badge/Dataset-Download-blue.svg)]([https://github.com/vita-epfl/helvipad/releases](https://huggingface.co/datasets/chcorbi/helvipad))
+[![Dataset](https://img.shields.io/badge/Dataset-Download-blue.svg)](https://huggingface.co/datasets/chcorbi/helvipad)
 [![Project Page](https://img.shields.io/badge/Project-Page-brightgreen)](https://vita-epfl.github.io/Helvipad/)
 
 ![Front Page](static/images/front_page.png)
