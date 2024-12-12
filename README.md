@@ -28,7 +28,6 @@ The dataset is organized into training and testing subsets with the following st
 ```
 helvipad/
 ├── train/
-│   ├── camera_videos             # Raw video footage
 │   ├── depth_maps                # Depth maps generated from LiDAR data
 │   ├── depth_maps_augmented      # Augmented depth maps using depth completion
 │   ├── disparity_maps            # Disparity maps computed from depth maps
@@ -37,7 +36,6 @@ helvipad/
 │   ├── images_bottom             # Bottom-camera RGB images
 │   ├── LiDAR_pcd                 # Original LiDAR point cloud data
 ├── test/
-│   ├── camera_videos             # Raw video footage
 │   ├── depth_maps                # Depth maps generated from LiDAR data
 │   ├── disparity_maps            # Disparity maps computed from depth maps
 │   ├── images_top                # Top-camera RGB images
@@ -88,6 +86,6 @@ This dataset is licensed under the [Creative Commons Attribution-ShareAlike 4.0 
 
 ## Acknowledgments
 
-This project was developed at the [Visual Intelligence for Transportation Laboratory (VITA)](https://www.epfl.ch/labs/vita/) at EPFL. 
-We thank all VITA lab members for their insightful feedback and help in improving the quality of this manuscript. 
-We also express our gratitude to Dr. Simone Schaub-Meyer and Oliver Hahn for their advice towards the end of the project.
+This work was supported by the [EPFL Center for Imaging](https://imaging.epfl.ch/) through a Collaborative Imaging Grant. 
+We thank the VITA lab members for their valuable feedback, which helped to enhance the quality of this manuscript. 
+We also express our gratitude to Dr. Simone Schaub-Meyer and Oliver Hahn for their insightful advice during the project's final stages.
