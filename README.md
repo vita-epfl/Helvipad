@@ -49,7 +49,7 @@ helvipad/
 We evaluate the performance of multiple state-of-the-art and popular stereo matching methods, both for standard and 360° images. All models are trained on a single NVIDIA A100 GPU with
 the largest possible batch size to ensure comparable use of computational resources.
 
-| Method             | Type           | Disp-MAE (°) | Disp-RMSE (°) | Disp-MARE | Depth-MAE (m) | Depth-RMSE (m) | Depth-MARE (m) |
+| Method             | Type           | Disp-MAE (°) | Disp-RMSE (°) | Disp-MARE | Depth-MAE (m) | Depth-RMSE (m) | Depth-MARE |
 |--------------------|----------------|--------------|---------------|-----------|---------------|----------------|----------------|
 | [PSMNet](https://arxiv.org/abs/1803.08669)           | Stereo        | 0.33         | 0.54          | 0.20      | 2.79          | 6.17           | 0.29           |
 | [360SD-Net](https://arxiv.org/abs/1911.04460)        | 360° Stereo   | 0.21         | 0.42          | 0.18      | 2.14          | 5.12           | 0.15           |
