@@ -1,5 +1,5 @@
 
-# <span style="font-variant: small-caps;">Helvipad</span>: A Real-World Dataset for Omnidirectional Stereo Depth Estimation
+# [CVPR 2025] <span style="font-variant: small-caps;">Helvipad</span>: A Real-World Dataset for Omnidirectional Stereo Depth Estimation
 
 [![arXiv](https://img.shields.io/badge/arXiv-2411.18335-b31b1b.svg)](https://arxiv.org/abs/2411.18335)
 [![Dataset](https://img.shields.io/badge/Dataset-Download-blue.svg)](https://huggingface.co/datasets/chcorbi/helvipad)
@@ -97,12 +97,10 @@ We also express our gratitude to Dr. Simone Schaub-Meyer and Oliver Hahn for the
 If you use the Helvipad dataset in your research, please cite our paper:
 
 ```bibtex
-@misc{zayene2024helvipad,
+@inproceedings{zayene2025helvipad,
   author        = {Zayene, Mehdi and Endres, Jannik and Havolli, Albias and Corbière, Charles and Cherkaoui, Salim and Ben Ahmed Kontouli, Alexandre and Alahi, Alexandre},
   title         = {Helvipad: A Real-World Dataset for Omnidirectional Stereo Depth Estimation},
-  year          = {2024},
-  eprint        = {2403.16999},
-  archivePrefix = {arXiv},
-  primaryClass  = {cs.CV}
+  booktitle    = {Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year          = {2025}
 }
 ```
