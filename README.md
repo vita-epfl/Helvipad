@@ -24,7 +24,7 @@ achieving improved performance.
 ## News
 
 -  **[16/02/2025]** Helvipad has been accepted to CVPR 2025! 🎉🎉
-- **[Post-CVPR Dataset Update – 16/03/2025]** A small but important update has been applied to the dataset. If you have already downloaded it, please check the details on the [HuggingFace Hub](https://github.com/vita-epfl/helvipad/releases).
+- **[CVPR Update – 16/03/2025]** A small but important update has been applied to the dataset. If you have already downloaded it, please check the details on the [HuggingFace Hub](https://github.com/vita-epfl/helvipad/releases).
 
 
 ## Dataset Structure
