@@ -21,9 +21,15 @@ The results show that while recent stereo methods perform decently, a significan
 estimating depth in omnidirectional imaging. To address this, we introduce necessary adaptations to stereo models,
 achieving improved performance.
 
+## News
+
+-  **[16/02/2025]** Helvipad has been accepted to CVPR 2025! 🎉🎉
+- **[Post-CVPR Dataset Update – 16/03/2025]** A small but important update has been applied to the dataset. If you have already downloaded it, please check the details on the [HuggingFace Hub](https://github.com/vita-epfl/helvipad/releases).
+
+
 ## Dataset Structure
 
-The dataset is organized into training and testing subsets with the following structure:
+The dataset is organized into training, validation and testing subsets with the following structure:
 
 ```
 helvipad/
@@ -35,9 +41,19 @@ helvipad/
 │   ├── images_top                # Top-camera RGB images
 │   ├── images_bottom             # Bottom-camera RGB images
 │   ├── LiDAR_pcd                 # Original LiDAR point cloud data
+├── val/
+│   ├── depth_maps                # Depth maps generated from LiDAR data
+│   ├── depth_maps_augmented      # Augmented depth maps using depth completion
+│   ├── disparity_maps            # Disparity maps computed from depth maps
+│   ├── disparity_maps_augmented  # Augmented disparity maps using depth completion
+│   ├── images_top                # Top-camera RGB images
+│   ├── images_bottom             # Bottom-camera RGB images
+│   ├── LiDAR_pcd                 # Original LiDAR point cloud data
 ├── test/
 │   ├── depth_maps                # Depth maps generated from LiDAR data
+│   ├── depth_maps_augmented      # Augmented depth maps using depth completion (only for computing LRCE)
 │   ├── disparity_maps            # Disparity maps computed from depth maps
+│   ├── disparity_maps_augmented  # Augmented disparity maps using depth completion (only for computing LRCE)
 │   ├── images_top                # Top-camera RGB images
 │   ├── images_bottom             # Bottom-camera RGB images
 │   ├── LiDAR_pcd                 # Original LiDAR point cloud data
@@ -49,12 +65,13 @@ helvipad/
 We evaluate the performance of multiple state-of-the-art and popular stereo matching methods, both for standard and 360° images. All models are trained on a single NVIDIA A100 GPU with
 the largest possible batch size to ensure comparable use of computational resources.
 
-| Method             | Type           | Disp-MAE (°) | Disp-RMSE (°) | Disp-MARE | Depth-MAE (m) | Depth-RMSE (m) | Depth-MARE |
-|--------------------|----------------|--------------|---------------|-----------|---------------|----------------|----------------|
-| [PSMNet](https://arxiv.org/abs/1803.08669)           | Stereo        | 0.33         | 0.54          | 0.20      | 2.79          | 6.17           | 0.29           |
-| [360SD-Net](https://arxiv.org/abs/1911.04460)        | 360° Stereo   | 0.21         | 0.42          | 0.18      | 2.14          | 5.12           | 0.15           |
-| [IGEV-Stereo](https://arxiv.org/abs/2303.06615)      | Stereo        | 0.22         | 0.41          | 0.17      | 1.85          | 4.44           | 0.15           |
-| [360-IGEV-Stereo](https://arxiv.org/abs/2411.18335)    | 360° Stereo   | **0.18**     | **0.39**      | **0.15**  | **1.77**      | **4.36**       | **0.14**       |
+| Method             | Stereo Setting    | Disp-MAE (°)  | Disp-RMSE (°)  | Disp-MARE  | Depth-MAE (m)  | Depth-RMSE (m) | Depth-MARE      | Depth-LRCE (m)  |
+|--------------------|-------------------|---------------|----------------|------------|----------------|----------------|-----------------|-----------------|
+| PSMNet             | conventional      | 0.286         | 0.496          | 0.248      | 2.509          | 5.673           | 0.176          | 1.809           |
+| 360SD-Net          | omnidirectional   | 0.224         | 0.419          | 0.191      | 2.122          | 5.077           | 0.152          | 0.904           |
+| IGEV-Stereo        | conventional      | 0.225         | 0.423          | 0.172      | 1.860          | 4.447           | 0.146          | 1.203           |
+| 360-IGEV-Stereo    | omnidirectional   | **0.188**     | **0.404**      | **0.146**  | **1.720**      | **4.297**       | **0.130**      | 0.388           |
+
 
 ## Download
 
@@ -64,6 +81,16 @@ The dataset is available on [HuggingFace Hub](https://github.com/vita-epfl/helvi
 ## Project Page
 
 For more information, visualizations, and updates, visit the **[project page](https://vita-epfl.github.io/Helvipad/)**.
+
+## License
+
+This dataset is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
+
+## Acknowledgments
+
+This work was supported by the [EPFL Center for Imaging](https://imaging.epfl.ch/) through a Collaborative Imaging Grant. 
+We thank the VITA lab members for their valuable feedback, which helped to enhance the quality of this manuscript. 
+We also express our gratitude to Dr. Simone Schaub-Meyer and Oliver Hahn for their insightful advice during the project's final stages.
 
 ## Citation
 
@@ -79,13 +106,3 @@ If you use the Helvipad dataset in your research, please cite our paper:
   primaryClass  = {cs.CV}
 }
 ```
-
-## License
-
-This dataset is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
-
-## Acknowledgments
-
-This work was supported by the [EPFL Center for Imaging](https://imaging.epfl.ch/) through a Collaborative Imaging Grant. 
-We thank the VITA lab members for their valuable feedback, which helped to enhance the quality of this manuscript. 
-We also express our gratitude to Dr. Simone Schaub-Meyer and Oliver Hahn for their insightful advice during the project's final stages.
