@@ -98,9 +98,9 @@ If you use the Helvipad dataset in your research, please cite our paper:
 
 ```bibtex
 @inproceedings{zayene2025helvipad,
-  author        = {Zayene, Mehdi and Endres, Jannik and Havolli, Albias and Corbière, Charles and Cherkaoui, Salim and Ben Ahmed Kontouli, Alexandre and Alahi, Alexandre},
-  title         = {Helvipad: A Real-World Dataset for Omnidirectional Stereo Depth Estimation},
-  booktitle    = {Conference on Computer Vision and Pattern Recognition (CVPR)},
-  year          = {2025}
+  author    = {Zayene, Mehdi and Endres, Jannik and Havolli, Albias and Corbière, Charles and Cherkaoui, Salim and Ben Ahmed Kontouli, Alexandre and Alahi, Alexandre},
+  title     = {Helvipad: A Real-World Dataset for Omnidirectional Stereo Depth Estimation},
+  booktitle = {Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year      = {2025}
 }
 ```
