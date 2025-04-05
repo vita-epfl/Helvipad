@@ -1,5 +1,5 @@
 
-# [CVPR 2025] <span style="font-variant: small-caps;">Helvipad</span>: A Real-World Dataset for Omnidirectional Stereo Depth Estimation
+# [CVPR 2025 Highlight] <span style="font-variant: small-caps;">Helvipad</span>: A Real-World Dataset for Omnidirectional Stereo Depth Estimation
 
 [![arXiv](https://img.shields.io/badge/arXiv-2411.18335-b31b1b.svg)](https://arxiv.org/abs/2411.18335)
 [![Dataset](https://img.shields.io/badge/Dataset-Download-blue.svg)](https://huggingface.co/datasets/chcorbi/helvipad)
