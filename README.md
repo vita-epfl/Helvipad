@@ -23,9 +23,9 @@ achieving improved performance.
 
 ## News
 
--  **[16/02/2025]** Helvipad has been accepted to CVPR 2025! 🎉🎉
-- **[CVPR Update – 16/03/2025]** A small but important update has been applied to the dataset. If you have already downloaded it, please check the details on the [HuggingFace Hub](https://github.com/vita-epfl/helvipad/releases).
-
+- **[01 Apr 2025]** Our new paper **DFI-OmniStereo** achieves **state-of-the-art results** on Helvipad. Check out the [project page](https://vita-epfl.github.io/DFI-OmniStereo-website/) for details, paper and code.
+- **[16 Mar 2025 - CVPR Update]** A small but important update has been applied to the dataset. If you have already downloaded it, please check the details on the [HuggingFace Hub](https://github.com/vita-epfl/helvipad/releases).
+- **[16 Feb 2025]** Helvipad has been accepted to CVPR 2025! 🎉🎉
 
 ## Dataset Structure
 
@@ -65,12 +65,13 @@ helvipad/
 We evaluate the performance of multiple state-of-the-art and popular stereo matching methods, both for standard and 360° images. All models are trained on a single NVIDIA A100 GPU with
 the largest possible batch size to ensure comparable use of computational resources.
 
-| Method             | Stereo Setting    | Disp-MAE (°)  | Disp-RMSE (°)  | Disp-MARE  | Depth-MAE (m)  | Depth-RMSE (m) | Depth-MARE      | Depth-LRCE (m)  |
-|--------------------|-------------------|---------------|----------------|------------|----------------|----------------|-----------------|-----------------|
-| PSMNet             | conventional      | 0.286         | 0.496          | 0.248      | 2.509          | 5.673           | 0.176          | 1.809           |
-| 360SD-Net          | omnidirectional   | 0.224         | 0.419          | 0.191      | 2.122          | 5.077           | 0.152          | 0.904           |
-| IGEV-Stereo        | conventional      | 0.225         | 0.423          | 0.172      | 1.860          | 4.447           | 0.146          | 1.203           |
-| 360-IGEV-Stereo    | omnidirectional   | **0.188**     | **0.404**      | **0.146**  | **1.720**      | **4.297**       | **0.130**      | 0.388           |
+| Method                                              | Stereo Setting    | Disp-MAE (°) | Disp-RMSE (°) | Disp-MARE | Depth-MAE (m) | Depth-RMSE (m) | Depth-MARE | Depth-LRCE (m) |
+|-----------------------------------------------------|-------------------|--------------|-----------|-----------|---------------|----------------|------------|----------------|
+| [PSMNet](https://arxiv.org/abs/1803.08669)          | conventional      | 0.286        | 0.496     | 0.248     | 2.509         | 5.673          | 0.176      | 1.809          |
+| [360SD-Net](https://arxiv.org/abs/1911.04460)       | omnidirectional   | 0.224        | 0.419     | 0.191     | 2.122         | 5.077          | 0.152      | 0.904          |
+| [IGEV-Stereo](https://arxiv.org/abs/2303.06615)     | conventional      | 0.225        | 0.423     | 0.172     | 1.860         | 4.447          | 0.146      | 1.203          |
+| [360-IGEV-Stereo](https://arxiv.org/abs/2411.18335) | omnidirectional   | 0.188        | 0.404     | 0.146     | 1.720         | 4.297          | 0.130      | **0.388**      |
+| [DFI-OmniStereo](https://arxiv.org/abs/2503.23502)  | omnidirectional   | **0.158**    | **0.338** | **0.120** | **1.463**     | **3.767**      | **0.108**  | 0.397          |
 
 
 ## Download
