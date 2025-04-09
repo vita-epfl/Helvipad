@@ -23,7 +23,7 @@ achieving improved performance.
 
 ## News
 
-- **[08 Apr 2025]** Our new paper **DFI-OmniStereo** achieves **state-of-the-art results** on Helvipad. Check out the [project page](https://vita-epfl.github.io/DFI-OmniStereo-website/) for details, paper and code.
+- **[08 Apr 2025]** Our new paper **DFI-OmniStereo** achieves state-of-the-art results on Helvipad. Check out the [project page](https://vita-epfl.github.io/DFI-OmniStereo-website/) for details, paper and code.
 - **[16 Mar 2025 - CVPR Update]** A small but important update has been applied to the dataset. If you have already downloaded it, please check the details on the [HuggingFace Hub](https://github.com/vita-epfl/helvipad/releases).
 - **[16 Feb 2025]** Helvipad has been accepted to CVPR 2025! 🎉🎉
 
