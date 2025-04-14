@@ -110,7 +110,7 @@ Place the downloaded file into the directory created above.
 360-IGEV-Stereo main checkpoint: Download our pretrained model checkpoint:
 ```bash
 mkdir -p ./models/_360_igev_stereo/pretrained_models/360_igev_stereo && \
-wget -O ./models/_360_igev_stereo/pretrained_models/360_igev_stereo/360_igev_stereo_helvipad.pth "https://github.com/vita-epfl/Helvipad/releases/download/v0.1.0/360_igev_stereo_helvipad.pth"
+wget -O ./models/_360_igev_stereo/pretrained_models/360_igev_stereo/360_igev_stereo_helvipad.pth "https://github.com/vita-epfl/Helvipad/releases/download/v1.0.0/360_igev_stereo_helvipad.pth"
 ```
 
 ### Training
