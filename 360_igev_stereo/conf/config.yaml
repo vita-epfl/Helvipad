@@ -1,0 +1,28 @@
+# Hydra settings
+hydra:
+  job:
+    chdir: true  # Automatically change the working directory to the job's output directory
+
+# Experiment settings
+exp_name: 'debug'  # Name of the experiment, used for logging in wandb
+debug: true        # Enable debug mode (disables certain features like wandb logging)
+
+# Dataset settings
+dataset: 'helvipad'  # Name of the dataset to use (e.g., 'helvipad', '360SD')
+augmented_gt: true   # Whether to use augmented ground truth data
+use_sequence: ALL    # Sequence to use for training/validation (e.g., 'ALL', specific sequence names)
+
+# Reproducibility
+seed: 0              # Random seed for reproducibility
+
+# DataLoader settings
+num_workers: 0       # Number of worker threads for data loading (0 for single-threaded loading)
+
+# Logging settings
+image_logs_per_epoch_train: 3  # Number of image logs to generate per training epoch
+image_logs_per_eval: 3         # Number of image logs to generate per evaluation
+
+# Default configurations
+defaults:
+  - model: 360_igev_stereo  # Default model configuration to use
+  - _self_                 # Include the current configuration file

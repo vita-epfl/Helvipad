@@ -1,0 +1,38 @@
+# General model settings
+model_name: 360-igev-stereo  # Name of the model
+restore_ckpt: models/_360_igev_stereo/pretrained_models/igev_stereo/sceneflow.pth  # Path to the checkpoint for restoring the model
+mixed_precision: true  # Enable mixed precision training for faster computation and reduced memory usage
+
+# Image and batch settings
+img_size: [512, 1920]  # Input image size (height, width)
+train_batch_size: 4  # Batch size for training
+val_batch_size: 2  # Batch size for validation
+
+# Training settings
+lr: 0.0002  # Learning rate for the optimizer
+epochs: 20  # Number of training epochs
+train_iters: 22  # Number of iterations per training step
+valid_iters: 32  # Number of iterations per validation step
+wdecay: 0.00001  # Weight decay for regularization
+pct_start: 0.01  # Percentage of the training cycle to increase the learning rate
+
+# Omnidirectional stereo matching settings
+corr_levels: 2  # Number of correlation levels
+corr_radius: 4  # Radius for correlation computation
+n_downsample: 2  # Number of downsampling layers
+slow_fast_gru: false  # Use slow-fast GRU architecture
+n_gru_layers: 3  # Number of GRU layers
+hidden_dims: [128, 128, 128]  # Hidden dimensions for GRU layers
+
+# General disparity and loss settings
+max_disp: 128  # Maximum disparity (must be a multiple of 32)
+min_disp_deg: 0.048  # Minimum disparity in degrees
+max_disp_deg: 23  # Maximum disparity in degrees
+val_circular_pad_size: 64  # Circular padding size for validation
+calc_lrce: false  # Calculate Left-Right Consistency Error (LRCE)
+
+# Data augmentation settings
+data_augmentation: true  # Enable data augmentation
+do_photo: true  # Apply photometric augmentation
+img_gamma: null  # Gamma range for image adjustment (use 'null' for no default value)
+saturation_range: [0, 1.4]  # Range for color saturation adjustment

@@ -23,6 +23,7 @@ achieving improved performance.
 
 ## News
 
+- **[14 Apr 2025]** We have released the code of our 360-IGEV-Stereo model which adapts a standard stereo matching architecture to omnidirectional imagery.
 - **[08 Apr 2025]** Our new paper **DFI-OmniStereo** achieves state-of-the-art results on Helvipad. Check out the [project page](https://vita-epfl.github.io/DFI-OmniStereo-website/) for details, paper and code.
 - **[16 Mar 2025 - CVPR Update]** A small but important update has been applied to the dataset. If you have already downloaded it, please check the details on the [HuggingFace Hub](https://github.com/vita-epfl/helvipad/releases).
 - **[16 Feb 2025]** Helvipad has been accepted to CVPR 2025! 🎉🎉
@@ -78,6 +79,110 @@ the largest possible batch size to ensure comparable use of computational resour
 
 The dataset is available on [HuggingFace Hub](https://github.com/vita-epfl/helvipad/releases).
 
+## 360-IGEV-Stereo
+
+The code of the method 360-IGEV-Stereo can be found in the `360_igev_stereo` directory. We use [Hydra](https://hydra.cc/) for configuration management and [Weights & Biases](https://wandb.ai/site/) for comprehensive experiment tracking and visualization.
+
+### Installation
+
+We assume that the Helvipad dataset has been downloaded and is stored at the location `./data/helvipad`.
+
+#### 1. Set up the environment
+
+```bash
+conda create -n 360-igev-stereo python=3.11
+conda activate 360-igev-stereo
+git clone git@github.com:vita-epfl/Helvipad.git
+cd Helvipad/360_igev_stereo
+pip install -r requirements.txt
+```
+
+#### 2. Download the pretrained weights
+
+##### A. For training
+IGEV-Stereo (SceneFlow weights): Create the directory and download the pretrained SceneFlow weights from the [IGEV-Stereo Google Drive](https://drive.google.com/drive/folders/1yqQ55j8ZRodF1MZAI6DAXjjre3--OYOX), as provided by [IGEV-Stereo](https://github.com/gangweix/IGEV):
+```bash
+mkdir -p ./models/_360_igev_stereo/pretrained_models/igev_stereo
+```
+Place the downloaded file into the directory created above.
+
+##### B. For evaluation and inference
+360-IGEV-Stereo main checkpoint: Download our pretrained model checkpoint:
+```bash
+mkdir -p ./models/_360_igev_stereo/pretrained_models/360_igev_stereo && \
+wget -O ./models/_360_igev_stereo/pretrained_models/360_igev_stereo/360_igev_stereo_helvipad.pth "https://github.com/vita-epfl/Helvipad/releases/download/v0.1.0/360_igev_stereo_helvipad.pth"
+```
+
+### Training
+
+To train the model from the IGEV-Stereo weights, run the following command:
+```bash
+cd 360_igev_stereo
+python train.py \
+  --debug=false \
+  --exp_name=Main \
+  --dataset_root=./data/helvipad/
+```
+All other parameters are set to their default values for training the main model.
+
+### Evaluation
+
+To evaluate our model using the main checkpoint and compute all metrics including Left-Right Consistency Error (LRCE), use:
+```bash
+cd src
+python evaluate.py \
+  --debug=false \
+  --exp_name=Evaluation \
+  --dataset_root=./data/helvipad/ \
+  --restore_ckpt=./models/_360_igev_stereo/pretrained_models/360_igev_stereo/360_igev_stereo_helvipad.pth \
+  --calc_lrce=true
+```
+Note: Setting `--calc_lrce=true` enables LRCE evaluation, which increases computation time.
+
+### Inference
+
+#### Helvipad examples
+
+To generate inference results on selected samples from the Helvipad dataset, run the following command:
+```bash
+cd src
+python infer.py \
+  --infer_name=helvipad_results \
+  --dataset_root=./data/helvipad/ \
+  --restore_ckpt=./models/_360_igev_stereo/pretrained_models/360_igev_stereo/360_igev_stereo_helvipad.pth \
+  --images test-20240120_REC_06_IN-0042 test-20240124_REC_03_OUT-0676 test-20240124_REC_08_NOUT-0717
+```
+This command will process the following frames (all of which are part of the `test` set):
+- `0042` from the scene `20240120_REC_06_IN`
+- `0676` from the scene `20240124_REC_03_OUT`
+- `0717` from the scene `20240124_REC_08_NOUT`
+
+The results as well as the top and bottom images will be saved to: `./models/_360_igev_stereo/inference_results/helvipad_results`.
+
+#### 360SD-Net real-world examples
+
+To evaluate our model on real-world examples from the [360SD-Net](https://github.com/albert100121/360SD-Net) dataset:
+1. Download the real-world top and bottom images from the [official repo](https://github.com/albert100121/360SD-Net/tree/master/data/realworld).
+2. Place the data in a directory of your choice, e.g., `./data/360sd`.
+3. Run the following command to perform inference:
+```bash
+cd src
+python infer.py \
+  --infer_name=360SD_results \
+  --dataset_root=./data/360sd/ \
+  --restore_ckpt=./models/_360_igev_stereo/pretrained_models/360_igev_stereo/360_igev_stereo_helvipad.pth \
+  --dataset=360SD \
+  --min_disp_deg=0.0048 \
+  --max_disp_deg=178 \
+  --max_disp=512 \
+  --images hall room stairs
+```
+This will run inference on the following scenes:
+- `hall`
+- `room`
+- `stairs`
+
+The results will be saved in: `./models/_360_igev_stereo/inference_results/360SD_results`.
 
 ## Project Page
 
