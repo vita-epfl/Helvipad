@@ -32,7 +32,7 @@ def compute_depth_from_disparity(
     disparity_map_rad = (torch.pi / height_down) * disparity_map
 
     depth_map = (
-        (torch.sin(theta_grid) / torch.tan(disparity_map_rad)) + torch.cos(theta_grid)
+        (torch.sin(theta_grid) / torch.tan(disparity_map_rad)) - torch.cos(theta_grid)
     ) * B
 
     return depth_map
