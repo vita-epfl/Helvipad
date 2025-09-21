@@ -23,9 +23,11 @@ achieving improved performance.
 
 ## News
 
+- **[21 Sep 2025 - ⚠️ Important Update]** We discovered a mistake in the conversion script for generating disparity maps from depth maps. We have now regenerated and uploaded the correct disparity maps to the HuggingFace repo.
+    - The previous disparity maps are still included, since they were used in the experiments reported in the Helvipad paper and the DFI-OmniStereo paper.
+    - For new work, we recommend using the corrected disparity maps.
 - **[14 Apr 2025]** We have released the code of our 360-IGEV-Stereo model which adapts a standard stereo matching architecture to omnidirectional imagery.
 - **[08 Apr 2025]** Our new paper **DFI-OmniStereo** achieves state-of-the-art results on Helvipad. Check out the [project page](https://vita-epfl.github.io/DFI-OmniStereo-website/) for details, paper and code.
-- **[16 Mar 2025 - CVPR Update]** A small but important update has been applied to the dataset. If you have already downloaded it, please check the details on the [HuggingFace Hub](https://github.com/vita-epfl/helvipad/releases).
 - **[16 Feb 2025]** Helvipad has been accepted to CVPR 2025! 🎉🎉
 
 ## Dataset Structure
@@ -35,29 +37,35 @@ The dataset is organized into training, validation and testing subsets with the 
 ```
 helvipad/
 ├── train/
-│   ├── depth_maps                # Depth maps generated from LiDAR data
-│   ├── depth_maps_augmented      # Augmented depth maps using depth completion
-│   ├── disparity_maps            # Disparity maps computed from depth maps
-│   ├── disparity_maps_augmented  # Augmented disparity maps using depth completion
-│   ├── images_top                # Top-camera RGB images
-│   ├── images_bottom             # Bottom-camera RGB images
-│   ├── LiDAR_pcd                 # Original LiDAR point cloud data
+│   ├── depth_maps                          # Depth maps generated from LiDAR data
+│   ├── depth_maps_augmented                # Augmented depth maps using depth completion
+│   ├── disparity_maps_corrected            # Corrected disparity maps computed from depth maps
+│   ├── disparity_maps                      # /!\ Legacy version of disparity maps computed from depth maps
+│   ├── disparity_maps_augmented_corrected  # Corrected augmented disparity maps using depth completion
+│   ├── disparity_maps_augmented            # /!\ Augmented disparity maps using depth completion
+│   ├── images_top                          # Top-camera RGB images
+│   ├── images_bottom                       # Bottom-camera RGB images
+│   ├── LiDAR_pcd                           # Original LiDAR point cloud data
 ├── val/
-│   ├── depth_maps                # Depth maps generated from LiDAR data
-│   ├── depth_maps_augmented      # Augmented depth maps using depth completion
-│   ├── disparity_maps            # Disparity maps computed from depth maps
-│   ├── disparity_maps_augmented  # Augmented disparity maps using depth completion
-│   ├── images_top                # Top-camera RGB images
-│   ├── images_bottom             # Bottom-camera RGB images
-│   ├── LiDAR_pcd                 # Original LiDAR point cloud data
+│   ├── depth_maps                          # Depth maps generated from LiDAR data
+│   ├── depth_maps_augmented                # Augmented depth maps using depth completion
+│   ├── disparity_maps_corrected            # Corrected disparity maps computed from depth maps
+│   ├── disparity_maps                      # /!\ Legacy version of disparity maps computed from depth maps
+│   ├── disparity_maps_augmented_corrected  # Corrected augmented disparity maps using depth completion
+│   ├── disparity_maps_augmented            # /!\ Augmented disparity maps using depth completion
+│   ├── images_top                          # Top-camera RGB images
+│   ├── images_bottom                       # Bottom-camera RGB images
+│   ├── LiDAR_pcd                           # Original LiDAR point cloud data
 ├── test/
-│   ├── depth_maps                # Depth maps generated from LiDAR data
-│   ├── depth_maps_augmented      # Augmented depth maps using depth completion (only for computing LRCE)
-│   ├── disparity_maps            # Disparity maps computed from depth maps
-│   ├── disparity_maps_augmented  # Augmented disparity maps using depth completion (only for computing LRCE)
-│   ├── images_top                # Top-camera RGB images
-│   ├── images_bottom             # Bottom-camera RGB images
-│   ├── LiDAR_pcd                 # Original LiDAR point cloud data
+│   ├── depth_maps                          # Depth maps generated from LiDAR data
+│   ├── depth_maps_augmented                # Augmented depth maps using depth completion
+│   ├── disparity_maps_corrected            # Corrected disparity maps computed from depth maps
+│   ├── disparity_maps                      # /!\ Legacy version of disparity maps computed from depth maps
+│   ├── disparity_maps_augmented_corrected  # Corrected augmented disparity maps using depth completion
+│   ├── disparity_maps_augmented            # /!\ Augmented disparity maps using depth completion
+│   ├── images_top                          # Top-camera RGB images
+│   ├── images_bottom                       # Bottom-camera RGB images
+│   ├── LiDAR_pcd                           # Original LiDAR point cloud data
 ```
 
 
@@ -74,6 +82,7 @@ the largest possible batch size to ensure comparable use of computational resour
 | [360-IGEV-Stereo](https://arxiv.org/abs/2411.18335) | omnidirectional   | 0.188        | 0.404     | 0.146     | 1.720         | 4.297          | 0.130      | **0.388**      |
 | [DFI-OmniStereo](https://arxiv.org/abs/2503.23502)  | omnidirectional   | **0.158**    | **0.338** | **0.120** | **1.463**     | **3.767**      | **0.108**  | 0.397          |
 
+Note: These benchmark results were obtained using the legacy disparity maps (the ones originally released and used in the Helvipad and DFIOmnistereo papers). Updated corrected disparity maps are now available in the dataset repo; results may vary slightly when retraining with the corrected maps.
 
 ## Download
 
