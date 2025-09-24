@@ -249,6 +249,12 @@ class Helvipad(StereoDataset):
     def __init__(self, cfg, mode, kind, sequence):
         """
         Initializes the Helvipad dataset.
+        
+        Important:
+            This loader uses the original Helvipad disparity maps released with the Helvipad paper.
+            After the publication of this work, a minor error was identified in the disparity maps of the Helvipad dataset.
+            We keep the legacy version to preserve published results.
+            For new work, we recommend using the corrected disparity maps (see commented code below).
 
         Parameters:
         - cfg: Configuration object containing dataset settings.
@@ -277,6 +283,18 @@ class Helvipad(StereoDataset):
 
         # Generate corresponding file lists for images and disparities
         self.image_list = self._generate_image_list(depth_list, depth_maps, 'images_bottom', 'images_top')
+        # To use corrected maps: comment the active line below and uncomment this block.
+        """
+        # Corrected disparity maps:
+        if mode == 'train' and cfg.augmented_gt:
+            self.disparity_list = self._generate_file_list(
+                depth_list, 'depth_maps_augmented', 'disparity_maps_augmented_corrected'
+            )
+        else:
+            self.disparity_list = self._generate_file_list(
+                depth_list, 'depth_maps', 'disparity_maps_corrected'
+            )
+        """
         self.disparity_list = self._generate_file_list(depth_list, 'depth_maps', 'disparity_maps')
 
         # Generate augmented file lists if required
@@ -284,6 +302,7 @@ class Helvipad(StereoDataset):
             self.depth_list = depth_list
             if self.calc_lrce:
                 self.depth_aug_list = self._generate_file_list(depth_list, 'depth_maps', 'depth_maps_augmented')
+                # To use the corrected disparity maps, replace 'disparity_maps_augmented' with 'disparity_maps_augmented_corrected' below
                 self.disparity_aug_list = self._generate_file_list(depth_list, 'depth_maps', 'disparity_maps_augmented')
 
         # Print dataset statistics
