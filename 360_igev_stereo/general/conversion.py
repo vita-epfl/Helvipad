@@ -17,14 +17,13 @@ def compute_depth_from_disparity(
         - theta is the vertical angle corresponding to each pixel in the y-grid.
         - disparity_rad is the disparity map scaled to radians.
 
-    /!\ Important: This implementation follows the original formula used in the Helvipad
-    paper. We later discovered a sign error in the derivation.
-    The corrected formula is:
-
-        depth = B * (sin(theta) / tan(disparity_rad) - cos(theta))
-
-    For reproducibility of published results, we keep this legacy version here.
-    For new work, please use the corrected formula above.
+    Important:
+        This implementation follows the original formula used in the Helvipad paper.
+        Later, after the publication of this work, a sign error was discovered in the derivation.
+        Corrected formula:
+            depth = B * (sin(theta) / tan(disparity_rad) - cos(theta))
+        This function keeps the legacy (+ cos) version so published results remain reproducible.
+        For new work, we recommend using the corrected formula.
 
     Parameters:
         disparity_map (torch.Tensor): Disparity values (bs, h, w).
