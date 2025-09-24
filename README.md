@@ -23,7 +23,7 @@ achieving improved performance.
 
 ## News
 
-- **[21 Sep 2025 - ⚠️ Important Update]** We discovered a mistake in the conversion script for generating disparity maps from depth maps. We have now regenerated and uploaded the correct disparity maps to the HuggingFace repo.
+- **[21 Sep 2025 - ⚠️ Important Update]** A minor error was identified in the Helvipad depth-to-disparity conversion formula. We have now regenerated and uploaded the correct disparity maps to the HuggingFace repo.
     - The previous disparity maps are still included, since they were used in the experiments reported in the Helvipad paper and the DFI-OmniStereo paper.
     - For new work, we recommend using the corrected disparity maps.
 - **[14 Apr 2025]** We have released the code of our 360-IGEV-Stereo model which adapts a standard stereo matching architecture to omnidirectional imagery.
